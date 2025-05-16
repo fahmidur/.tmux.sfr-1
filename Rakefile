@@ -13,8 +13,8 @@ task :init do
   else
     sh "git clone https://github.com/tmux-plugins/tpm ./plugins/tpm"
   end
-  sh "./plugins/tpm/bin/clean_plugins"
-  sh "./plugins/tpm/bin/install_plugins"
+  system "./plugins/tpm/bin/clean_plugins"
+  system "./plugins/tpm/bin/install_plugins"
 end
 task :i => [:init]
 
