@@ -11,7 +11,7 @@ task :init do
   if Dir.exist?("./plugins/tpm")
     sh "cd ./plugins/tpm && git pull"
   else
-    sh "https://github.com/tmux-plugins/tpm ./plugins/tpm"
+    sh "git clone https://github.com/tmux-plugins/tpm ./plugins/tpm"
   end
 end
 task :i => [:init]
