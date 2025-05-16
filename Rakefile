@@ -15,3 +15,9 @@ task :init do
   end
 end
 task :i => [:init]
+
+desc "Clean everything"
+task :clean do 
+  FileUtils.rm_rf("./plugins")
+end
+
